@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Tell us what to improve in Spin Wheel." />
+    <title>Spin Wheel — Feedback</title>
+    <link rel="icon" type="image/png" sizes="128x128" href="../icon128.png" />
+    <link rel="stylesheet" href="../service.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <a class="brand" href="../">
+        <img src="../icon128.png" width="30" height="30" alt="" />
+        <span>Spin Wheel</span>
+      </a>
+
+      <h1>Tell us what to fix</h1>
+      <p class="lead">What went wrong, or what is missing? Every answer is read by the person who builds the extension.</p>
+
+      <div
+        class="card form-frame"
+        id="form-slot"
+        data-form="feedbackForm"
+        data-form-title="Spin Wheel feedback"
+      >
+        <p class="pending" id="pending-note" style="padding: 22px">
+          <strong>The feedback form is not connected yet.</strong>
+          Paste the feedback form URL into <code>config.js</code> and this page will embed it.
+        </p>
+      </div>
+
+      <nav class="foot">
+        <a href="../">Welcome page</a>
+        <a href="../rate/">Rate Spin Wheel</a>
+      </nav>
+    </main>
+
+    <script src="../config.js"></script>
+    <script src="../embed-form.js"></script>
+  </body>
+</html>

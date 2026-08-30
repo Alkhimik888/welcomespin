@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./nunito-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./nunito-800.woff2') format('woff2');
+}
+
+/* Service pages (uninstall / feedback / rate). Same tokens as the welcome page. */
+:root {
+  --canvas: #f4f6fb;
+  --surface: #ffffff;
+  --ink: #141821;
+  --muted: #5a6273;
+  --line: #e2e8f2;
+  --accent: #1e3a8a;
+  --accent-hover: #152a68;
+  --on-accent: #ffffff;
+  --star: #ff8400;
+  --star-lit: #ffc711;
+  --radius-card: 20px;
+  --radius-control: 14px;
+  --sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+}
+a { color: var(--accent); }
+
+.shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 40px) 20px 56px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+  text-decoration: none;
+  color: inherit;
+}
+.brand img { width: 30px; height: 30px; display: block; }
+.brand span { font-weight: 800; letter-spacing: -0.01em; }
+
+h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.lead { margin: 0 0 24px; color: var(--muted); max-width: 56ch; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 22px;
+}
+.form-frame { padding: 0; overflow: hidden; }
+.form-frame iframe { display: block; width: 100%; height: 620px; border: 0; }
+
+/* Shown when config.js still carries a PENDING_OWNER placeholder. */
+.pending {
+  margin: 0;
+  color: var(--muted);
+}
+.pending strong { color: var(--ink); }
+
+.foot {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.foot a { color: var(--muted); }
+
+/* Rate-us: star gating. 1-3 stars go to the private feedback form,
+   4-5 stars go to the public Chrome Web Store reviews page. */
+.rate-card { text-align: center; }
+.full-stars .rating-group { display: inline-flex; }
+.full-stars input { position: absolute; left: -9999px; }
+.full-stars label { margin: 0; cursor: pointer; }
+.full-stars label a svg {
+  margin: 2px;
+  height: 38px;
+  width: 38px;
+  fill: var(--star);
+  transition: fill 0.3s;
+}
+.full-stars input:checked ~ label a svg { fill: var(--star-lit); }
+.full-stars .rating-group:hover label a svg { fill: var(--star); }
+.full-stars .rating-group input:hover ~ label a svg { fill: var(--star-lit); }
+
+.rate-title { margin: 14px 0 4px; font-size: 1.2rem; font-weight: 800; }
+.rate-sub { margin: 0; color: var(--muted); font-size: 15px; }
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 11px 22px;
+  border-radius: var(--radius-control);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 800;
+  text-decoration: none;
+}
+.button:hover { background: var(--accent-hover); }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-control);
+}
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
