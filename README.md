@@ -5,6 +5,7 @@ Hosted on GitHub Pages: https://alkhimik888.github.io/welcomespin/
 | Page | URL | Reached from |
 |---|---|---|
 | Welcome (post-install) | `/` | `chrome.runtime.onInstalled`, first install only |
+| Privacy policy | `/policy/` | Chrome Web Store Privacy tab URL |
 | Uninstall survey | `/uninstall/` | `chrome.runtime.setUninstallURL` |
 | Feedback | `/feedback/` | the extension popup, and 1–3★ on the rate page |
 | Rate us | `/rate/` | the extension popup |
