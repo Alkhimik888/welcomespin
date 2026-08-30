@@ -16,14 +16,18 @@ real one and every page picks it up; nothing else needs editing. A page whose UR
 still a placeholder renders an honest "not connected yet" note instead of a broken
 embed, so the site is never visibly broken.
 
-Open items (owner's hand):
+Wired 2026-08-30 — both Google Forms live, published, "anyone with the link",
+email collection OFF, response notifications ON:
 
-1. **`uninstallForm`** — Google Form "Spin Wheel — Uninstall": exactly one required
-   paragraph question, *Why did you uninstall Spin Wheel?*
-2. **`feedbackForm`** — Google Form "Spin Wheel — Feedback": two questions (reason for
-   the rating + what to improve), email collection OFF.
-3. **`storeId`** — exists only once Spin Wheel is published to the Chrome Web Store.
-   Until then the 4–5★ stars fall back to `/feedback/` rather than a dead store URL.
+| Form | Editor doc id |
+|---|---|
+| Spin Wheel — Uninstall | `1qNc9tXnZZajZ4HNsrkl6IwDiCXY8L3rnZ5ma_jQ20AA` |
+| Spin Wheel — Feedback | `1fR5-Y4cMO9xo6jSz1tygarc5gSl40RXBudVh9sXiHR8` |
+
+Still open:
+
+- **`storeId`** — exists only once Spin Wheel is published to the Chrome Web Store.
+  Until then the 4–5★ stars fall back to `/feedback/` rather than a dead store URL.
 
 Convention (owner, 2026-07-11): the uninstall form and the feedback form are two
 SEPARATE forms — a `?src=` parameter is not recorded by Google Forms, so reusing one
